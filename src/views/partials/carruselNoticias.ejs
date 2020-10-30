@@ -1,0 +1,12 @@
+<h1 class="display-4">Noticias</h1>
+<hr>
+<div class="card-columns">
+    <% for(var i=0 ; i < noticias.length; i++){ %>
+        <div class="card card-body">
+            <img src="<%= noticias[i].imagen %>" alt="" class="card-img-top m-0">
+            <h5 class="card-title text-center"><%= noticias[i].titulo %></h5>
+            <h6 class="card-subtitle"><%= noticias[i].subtitulo %></h6>
+            <a href="#" class="btn btn-sm btn-info mt-2 float-right">Saber más...</a>
+        </div>
+    <% } %>
+</div>

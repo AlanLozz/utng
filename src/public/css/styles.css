@@ -1,0 +1,95 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: #004981;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.fab-inicio i{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+}
+
+.fab-container ul{
+    position: absolute;
+    bottom: 5px;
+    right: .1px;
+    background: #004981;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.fab-container.active ul{
+    bottom: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.fab-container li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.fab-container.active li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.fab-container ul li:hover {
+    background-color: #034679;
+    font-weight: 600;
+}
+
+.fab-container ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.fab-container ul li i {
+    transform: scale(0.8);
+}
+
+.fab-container ul li:hover i{
+    opacity: 0.8;
+}
+
+hr.pulido{
+    height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}

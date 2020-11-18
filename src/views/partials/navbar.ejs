@@ -1,61 +1,66 @@
-<!--NAVBAR-->
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background-color: #004981;">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="/normal.svg" alt="Logo" class="d-none d-sm-block" width="300" loading="lazy">
-            <img src="/mini.svg" alt="Logo" class="d-block d-sm-none" width="60" loading="lazy">
+<div class="container mt-2 sticky-top" id="topper">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm rounded-pill" style="background-color: #004981;" id="barra">
+        <a href="/" class="navbar-brand">
+            <img src="/normal.svg" alt="Logo" width="200" loading="lazy">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="btntoggler">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown m-2">
-                    <a href="/" class="nav-link dropdown-toggle" id="inicioDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inicio</a>
-                    <div class="dropdown-menu" aria-labelledby="inicioDropdown">
-                        <a href="#" class="dropdown-item">Rector</a>
-                        <a href="#" class="dropdown-item">Noticias</a>
-                        <a href="#" class="dropdown-item">Convocatorias</a>
-                        <a href="#" class="dropdown-item">Videos</a>
-                        <a href="#" class="dropdown-item">Logros UTNG</a>
-                        <a href="#" class="dropdown-item">Campus</a>
-                        <a href="#" class="dropdown-item">Enlaces externos</a>
-                        <a href="#" class="dropdown-item">Denuncia ante el comite</a>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="ofertaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oferta Educativa</a>
+                    <div class="dropdown-menu" aria-labelledby="ofertaDropdown">
+                        <a href="#" class="dropdown-item">Campus Dolores</a>
+                        <a href="#" class="dropdown-item">Campus Victoria</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown m-2">
-                    <a href="#" class="nav-link dropdown-toggle" id="carrerasDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Carreras</a>
-                    <div class="dropdown-menu" aria-labelledby="carrerasDropdown">
-                        <a href="#" class="dropdown-item">Todas</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown m-2">
-                    <a href="#" class="nav-link dropdown-toggle" id="aspirantesDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aspirantes</a>
-                    <div class="dropdown-menu" aria-labelledby="aspirantesDropdown">
-                        <a href="#" class="dropdown-item">¿Porqué estudiar en la UTNG?</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown m-2">
-                    <a href="#" class="nav-link dropdown-toggle" id="estudiantesDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
-                    <div class="dropdown-menu" aria-labelledby="estudiantesDropdown">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="comunidadDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comunidad UTNG</a>
+                    <div class="dropdown-menu" aria-labelledby="comunidadDropdown">
+                        <h2 class="dropdown-header">Estudiantes</h2>
                         <a href="#" class="dropdown-item">Becas</a>
+                        <h2 class="dropdown-header">Egresados</h2>
+                        <a href="/bolsaTrabajo" class="dropdown-item">Bolsa de trabajo</a>
+                        <h2 class="dropdown-header">Docentes</h2>
+                        <a href="/cuerposac" class="dropdown-item">Cuerpos Academicos</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown m-2">
-                    <a href="#" class="nav-link dropdown-toggle" id="egresadosDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Egresados</a>
-                    <div class="dropdown-menu" aria-labelledby="egresadosDropdown">
-                        <a href="/egresados/1" class="dropdown-item">Bolsa de trabajo</a>
-                        <a href="/egresados/2" class="dropdown-item">Capacitación y <br>adiestramiento</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="serviciosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="serviciosDropdown">
+                        <a href="#" class="dropdown-item">Agricultura Protegida</a>
+                        <a href="#" class="dropdown-item">Seguimiento de Egresados y Bolsa de trabajo</a>
+                        <a href="#" class="dropdown-item">Capacitación y adiestramiento</a>
+                        <a href="#" class="dropdown-item">Desarrollo de software</a>
+                        <a href="#" class="dropdown-item">Incubación de empresas</a>
+                        <a href="#" class="dropdown-item">Servicios empresariales</a>
+                        <a href="#" class="dropdown-item">Centro de evaluación</a>
                     </div>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
-<!--FIN NAVBAR-->
+    </nav>
+</div>
+
+<script>
+    if($(window).width()<=768){
+        $('#topper').removeClass('container');
+        $('#topper').removeClass('mt-2');
+        $('#barra').removeClass('rounded-pill');
+    }else{
+        $(window).on('scroll',function () {
+        if($(window).scrollTop()){
+            $('#topper').removeClass('container');
+            $('#barra').removeClass('rounded-pill');
+        } else {
+            $('#topper').addClass('container');
+            $('#barra').addClass('rounded-pill');
+        }
+    });
+    }
+</script>

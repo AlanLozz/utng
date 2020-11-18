@@ -1,0 +1,111 @@
+<div class="social d-none d-sm-block">
+    <ul>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/facebook.png" alt="" width="30">
+                <span>Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/twitter.png" alt="" width="30">
+                <span>Twitter</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/youtube.png" alt="" width="30">
+                <span>Youtube</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/hc-color.png" alt="" width="30">
+                <span>H. Consejo</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/sgc-color.png" alt="" width="30">
+                <span>SGC</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/siga-color.png" alt="" width="30">
+                <span>SIGA</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://elearning.utng.edu.mx" target="_blank">
+                <img src="https://www.utng.edu.mx/assets/principal/iconos/plataforma-color.png" alt="" width="30">
+                <span>E-Learning</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .social{
+        position: fixed;
+        top: 20%;
+        left: 0px;
+    }
+
+    .social ul{
+        padding: 0;
+        margin: 0;
+        z-index: 110;
+    }
+
+    .social ul li{
+        list-style: none;
+    }
+
+    .social ul li a{
+        color: white;
+        background: white;
+        display: block;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        position: relative;
+        border-radius: 100%;
+        margin: 10px;
+        -webkit-box-shadow: 5px 6px 5px -1px rgba(0,0,0,0.34);
+        -moz-box-shadow: 5px 6px 5px -1px rgba(0,0,0,0.34);
+        box-shadow: 5px 6px 5px -1px rgba(0,0,0,0.34);
+    }
+
+    .social ul li a span {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        height: 50px;
+        color: #fff;
+        background: rgb(108, 116, 133);
+        font-size: 15px;
+        z-index: 3;
+        backface-visibility: hidden;
+        margin-left: 10px;
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    .social ul li:hover span{
+        opacity: 1;
+        backface-visibility: visible;
+        left: 50px;
+        visibility: visible;
+        transition: .3s;
+    }
+
+</style>

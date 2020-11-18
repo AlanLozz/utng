@@ -1,0 +1,55 @@
+<%- layout('layout') %>
+
+<div class="row mt-2">
+    <div class="col-md-12 compactor">
+        <img src="https://www.utng.edu.mx/assets/principal/servicios/banner/BolsaBanner.jpg" class="img-fluid">
+        <h5 class="display-4 text-center d-none d-sm-block texto"><i class="fas fa-search-dollar"></i> Bolsa de trabajo</h5>
+        <h2 class="text-center d-sm-none"><i class="fas fa-search-dollar texto"></i> Bolsa de trabajo</h2>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card rounded-0">
+            <div class="card-body">
+                <div class="container">
+                    <h3>Politicas y Requisitos para Bolsa de Trabajo</h3>
+                    <ul id="politicas">
+                        <li>Realizar el registro de manera presencial o vía correo electrónico, llevar tu CV y una fotografía tamaño infantil reciente.</li>
+                        <li>Acudir a las actividades convocadas por Bolsa de Trabajo y Seguimiento de Egresados.</li>
+                        <li>Tener disponibilidad para trabajar tiempo completo</li>
+                        <li>Tener disponibilidad para establecerse en el lugar de la vacante si ésta así lo requiere</li>
+                    </ul>
+                </div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="convocatorias-tab" data-toggle="tab" href="#convocatorias" role="tab" aria-controls="convocatorias" aria-selected="true">Convocatorias</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="empresa-tab" data-toggle="tab" href="#empresa" role="tab" aria-controls="empresa" aria-selected="true">Registrar mi empresa</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="convocatorias" role="tabpanel" aria-labelledby="convocatorias-tab">
+                        <div class="container">
+                            <ul class="list-unstyled">
+                                <% for(var i=0; i < bolsa.length; i++){ %>
+                                    <li class="media mt-2">
+                                        <img src="<%= bolsa[i].imagen %>" class="mr-3" alt="..." width="60">
+                                        <div class="media-body">
+                                          <h5 class="mt-0 mb-1"><%= bolsa[i].titulo %></h5>
+                                          <%= bolsa[i].descripcion %>
+                                          <a href="<%= bolsa[i].link %>" class="btn btn-sm btn-info float-right">Saber más...</a>
+                                        </div>
+                                      </li>
+                                      <hr>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="empresa" role="tabpanel" aria-labelledby="empresa-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum sint natus.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

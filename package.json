@@ -6,6 +6,7 @@
   "dependencies": {
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.10.14",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
@@ -13,7 +14,7 @@
   },
   "scripts": {
     "start": "src/server.js",
-    "dev" : "nodemon src/server.js"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",

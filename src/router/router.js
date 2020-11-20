@@ -61,4 +61,8 @@ router.get('/investigaciones',(req,res)=> {
     res.render('investigaciones');
 })
 
+router.get('/academiaS',(req,res) =>{
+    res.render('academias');
+})
+
 module.exports = router;

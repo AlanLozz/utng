@@ -57,4 +57,8 @@ router.get('/cuerposac', (req,res)=> {
     res.render('cuerposAcademicos');
 });
 
+router.get('/investigaciones',(req,res)=> {
+    res.render('investigaciones');
+})
+
 module.exports = router;

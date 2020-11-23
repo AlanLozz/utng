@@ -35,13 +35,13 @@ var bolsa = [
         imagen : 'https://altaglatam.com/wp-content/uploads/2015/03/COCA-COLA-LOGO.jpg',
         titulo: 'Practicante RH',
         descripcion: 'Se solicita a un practicante del area de recursos humanos, apoyo economico a tratar, de preferencia estudiante cursando su septimo cuatrimestre.',
-        link: '#'
+        empresa: 'Coca - Cola'
     },
     {
         imagen : 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Pepsi_logo_2014.svg',
         titulo: 'Diseñador Grafico',
         descripcion: 'Se solicita practicante del area de diseño grafico, apoyo economico fijo, solo estudiantes de sexto cuatrimestre en adelante',
-        link: '#'
+        empresa: 'Pepsi'
     },
 ]
 

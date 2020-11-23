@@ -40,7 +40,7 @@
                                         <div class="media-body">
                                           <h5 class="mt-0 mb-1"><%= bolsa[i].titulo %></h5>
                                           <%= bolsa[i].descripcion %>
-                                          <a href="<%= bolsa[i].link %>" class="btn btn-sm btn-info float-right">Saber más...</a>
+                                          <button class="btn btn-sm btn-info float-right" type="button" onclick="subirCurriculum('<%= bolsa[i].empresa %>')">Saber más...</button>
                                         </div>
                                       </li>
                                       <hr>
@@ -69,3 +69,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    function subirCurriculum (nombre) {
+        Swal.fire({
+            title: `Envia tu curriculum vitae a ${nombre}`,
+            text: 'El archivo debe tener una extensión .pdf',
+            input: 'file',
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false,
+            confirmButtonText: 'Enviar',
+            cancelButtonText: 'Cancelar',
+            showCancelButton: true,
+            reverseButtons: true
+        })
+    }
+</script>

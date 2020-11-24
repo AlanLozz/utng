@@ -40,7 +40,7 @@
                                         <div class="media-body">
                                           <h5 class="mt-0 mb-1"><%= bolsa[i].titulo %></h5>
                                           <%= bolsa[i].descripcion %>
-                                          <button class="btn btn-sm btn-info float-right" type="button" onclick="subirCurriculum('<%= bolsa[i].empresa %>')">Saber más...</button>
+                                          <button class="btn btn-sm btn-info float-right" type="button" data-toggle="modal" data-target="#EnviarCV">Enviar mi CV</button>
                                         </div>
                                       </li>
                                       <hr>
@@ -70,21 +70,55 @@
     </div>
 </div>
 
-<script>
-    function subirCurriculum (nombre) {
-        Swal.fire({
-            title: `Envia tu curriculum vitae a ${nombre}`,
-            text: 'El archivo debe tener una extensión .pdf',
-            input: 'file',
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false,
-            confirmButtonText: 'Enviar',
-            cancelButtonText: 'Cancelar',
-            showCancelButton: true,
-            reverseButtons: true
-        })
+<div class="modal fade" id="EnviarCV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enviar CV</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Debes enviar tu curriculum vitae en formato PDF</p>
+        <form action="/subircv" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Subir CV:</label>
+                <input type="file" class="file-input" id="file" name="file" required>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<style>
+    .file-input::-webkit-file-upload-button {
+        visibility: hidden;
     }
-</script>
+    .file-input::before {
+        content: 'Subir PDF';
+        display: inline-block;
+        background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+    }
+    .file-input:hover::before {
+        border-color: black;
+    }
+    .file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+</style>

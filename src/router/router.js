@@ -1,4 +1,10 @@
 const router = require('express').Router();
+const multer = require('multer');
+const path = require('path');
+const cv = multer({
+    dest: path.join(__dirname,'../public/temp')
+});
+const ctrl = require('../controller/index');
 
 var noticias = [
     {
@@ -64,5 +70,7 @@ router.get('/investigaciones',(req,res)=> {
 router.get('/academiaS',(req,res) =>{
     res.render('academias');
 })
+
+router.post('/subircv',cv.single('file'),ctrl.cv)
 
 module.exports = router;

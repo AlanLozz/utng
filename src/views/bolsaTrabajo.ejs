@@ -16,41 +16,48 @@
                 <div class="container">
                     <h3>Politicas y Requisitos para Bolsa de Trabajo</h3>
                     <ul id="politicas">
-                        <li>Realizar el registro de manera presencial o vía correo electrónico, llevar tu CV y una fotografía tamaño infantil reciente.</li>
+                        <li>Realizar el registro de manera presencial o vía correo electrónico, llevar tu CV y una
+                            fotografía tamaño infantil reciente.</li>
                         <li>Acudir a las actividades convocadas por Bolsa de Trabajo y Seguimiento de Egresados.</li>
                         <li>Tener disponibilidad para trabajar tiempo completo</li>
-                        <li>Tener disponibilidad para establecerse en el lugar de la vacante si ésta así lo requiere</li>
+                        <li>Tener disponibilidad para establecerse en el lugar de la vacante si ésta así lo requiere
+                        </li>
                     </ul>
                 </div>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="convocatorias-tab" data-toggle="tab" href="#convocatorias" role="tab" aria-controls="convocatorias" aria-selected="true">Convocatorias</a>
+                        <a class="nav-link active" id="convocatorias-tab" data-toggle="tab" href="#convocatorias"
+                            role="tab" aria-controls="convocatorias" aria-selected="true">Convocatorias</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="empresa-tab" data-toggle="tab" href="#empresa" role="tab" aria-controls="empresa" aria-selected="true">Registrar mi empresa</a>
+                        <a class="nav-link" id="empresa-tab" data-toggle="tab" href="#empresa" role="tab"
+                            aria-controls="empresa" aria-selected="true">Registrar mi empresa</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="convocatorias" role="tabpanel" aria-labelledby="convocatorias-tab">
+                    <div class="tab-pane fade show active" id="convocatorias" role="tabpanel"
+                        aria-labelledby="convocatorias-tab">
                         <div class="container">
                             <ul class="list-unstyled">
                                 <% for(var i=0; i < bolsa.length; i++){ %>
-                                    <li class="media mt-2">
-                                        <img src="<%= bolsa[i].imagen %>" class="mr-3" alt="..." width="60">
-                                        <div class="media-body">
-                                          <h5 class="mt-0 mb-1"><%= bolsa[i].titulo %></h5>
-                                          <%= bolsa[i].descripcion %>
-                                          <button class="btn btn-sm btn-info float-right" type="button" data-toggle="modal" data-target="#EnviarCV">Enviar mi CV</button>
-                                        </div>
-                                      </li>
-                                      <hr>
+                                <li class="media mt-2">
+                                    <img src="<%= bolsa[i].imagen %>" class="mr-3" alt="..." width="60">
+                                    <div class="media-body">
+                                        <h5 class="mt-0 mb-1"><%= bolsa[i].titulo %></h5>
+                                        <%= bolsa[i].descripcion %>
+                                        <button class="btn btn-sm btn-info float-right" type="button"
+                                            data-toggle="modal" data-target="#EnviarCV">Enviar mi CV</button>
+                                    </div>
+                                </li>
+                                <hr>
                                 <% } %>
                             </ul>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="empresa" role="tabpanel" aria-labelledby="empresa-tab">
                         <h1 class="text-center card-title">Contactanos</h1>
-                        <p>Por el momento solo puedes registrar tu empresa a traves de un registro presencial, para más información contactanos.</p>
+                        <p>Por el momento solo puedes registrar tu empresa a traves de un registro presencial, para más
+                            información contactanos.</p>
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
@@ -69,37 +76,40 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="EnviarCV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Modal enviar cv-->
+<div class="modal fade" id="EnviarCV" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Enviar CV</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <p>Debes enviar tu curriculum vitae en formato PDF</p>
-        <form action="/subircv" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="file">Subir CV:</label>
-                <input type="file" class="file-input" id="file" name="file" required>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enviar CV</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Debes enviar tu curriculum vitae en formato PDF</p>
+                <form action="/subircv" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Subir CV:</label>
+                        <input type="file" class="file-input" id="file" name="file" required>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        </div>
-      </div>
     </div>
 </div>
+<!--Fin modal-->
 
+<!--Estilos requeridos-->
 <style>
     .file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
+
     .file-input::before {
         content: 'Subir PDF';
         display: inline-block;
@@ -115,10 +125,54 @@
         font-weight: 700;
         font-size: 10pt;
     }
+
     .file-input:hover::before {
         border-color: black;
     }
+
     .file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
 </style>
+<!--Fin de estilos-->
+
+<!--Script help-->
+<script>
+    function showHelp() {
+        $('#helperModal').modal()
+    }
+</script>
+<!--Fin script-->
+
+<!--Modal help-->
+<div class="modal modal-centered fade" tabindex="-1" id="helperModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ayuda</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="text-center">¿Cómo puedo subir mi curriculum?</h4>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://www.youtube.com/embed/5IXC3tkckhY" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin modal help-->

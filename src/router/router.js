@@ -55,17 +55,19 @@ router.get('/',(req,res)=>{
     res.render('index',{noticias});
 });
 
-router.get('/cuerposac', (req,res)=> {
-    res.render('cuerposAcademicos');
-});
+//Docentes
+    router.get('/cuerposac', (req,res)=> {
+        res.render('cuerposAcademicos');
+    });
 
-router.get('/investigaciones',(req,res)=> {
-    res.render('investigaciones');
-});
+    router.get('/investigaciones',(req,res)=> {
+        res.render('investigaciones');
+    });
 
-router.get('/academiaS',(req,res) =>{
-    res.render('academias');
-});
+    router.get('/academiaS',(req,res) =>{
+        res.render('academias');
+    });
+
 //Egresados
     router.get('/bolsaTrabajo',(req,res)=>{
         res.render('bolsaTrabajo',{bolsa});
@@ -79,6 +81,13 @@ router.get('/academiaS',(req,res) =>{
         res.render('capacitacion');
     });
 
-router.post('/subircv',cv.single('file'),ctrl.cv)
+    router.post('/subircv',cv.single('file'),ctrl.cv);
+
+//Foro
+    router.get('/foro',(req,res) => {
+        res.render('foro');
+    });
+
+    router.post('/saveQuestion',ctrl.saveQuestion);
 
 module.exports = router;

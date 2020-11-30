@@ -1,0 +1,46 @@
+<%- layout('layout') %>
+<div class="row">
+    <div class="col-12">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+            <h2 class="text-center">Foro de mejora continua</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-info float-right" type="button" data-toggle="modal" data-target="#preguntaModal">Añadir Pregunta</button>
+            </div>
+            <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eaque! Beatae ipsam assumenda incidunt exercitationem. Repudiandae fugiat perferendis eaque quam omnis, dolorem rem aliquam illo minima, error eos cum maxime?
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="preguntaModal" tabindex="-1" aria-labelledby="preguntaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="preguntaModalLabel">Agregar Pregunta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/saveQuestion">
+                    <div class="form-group">
+                        <label for="Titulo">Titulo</label>
+                        <input type="text" name="Titulo" id="Titulo" class="form-control" placeholder="¿Cómo puedo subir mi C.V.?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Descripcion">Descripción</label>
+                        <textarea name="Descripcion" id="Descripcion" rows="5" class="form-control" placeholder="No encuentro la opción para subir mi Curriculum Vitae en la bolsa de trabajo." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success float-right">Enviar <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

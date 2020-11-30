@@ -1,4 +1,5 @@
 <%- layout('layout') %>
+<%- partial('partials/help') %>
 <br>
 <img src="/img/profesBanner.jpg" alt="" class="img-fluid shadow">
 
@@ -57,3 +58,36 @@
 
   </div>
 </section>
+<!--Script help-->
+<script>
+  function showHelp() {
+    $('#helperModal').modal()
+  }
+</script>
+<!--Fin script-->
+
+<!--Modal help-->
+<div class="modal modal-centered fade" tabindex="-1" id="helperModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ayuda</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-center">¿No encontraste lo que necesitabas?</h5>
+              <p>Visita nuestro <a href="/foro">foro de mejora continua</a>, donde encontraras las dudas más frecuentes y
+                posibles respuestas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin modal help-->

@@ -1,6 +1,7 @@
 const ctrl= {};
 const path = require('path');
 const fs = require('fs-extra');
+const Pregunta = require('../models/Pregunta');
 
 function genName() {
     const posible = 'abcdefghijklmnopqrstuvwxyz0123456789'
@@ -21,6 +22,18 @@ ctrl.cv = (req,res) => {
 
     fs.rename(tempath,finalpath);
     res.redirect('/bolsaTrabajo');
+}
+
+ctrl.saveQuestion = async(req,res) => {
+    let {Titulo, Descripcion} = req.body;
+    console.log(Titulo, Descripcion);
+    var pregunta = new Pregunta({
+        Titulo,
+        Descripcion
+    });
+    
+    var p = await pregunta.save();
+    res.json(p);
 }
 
 module.exports = ctrl;

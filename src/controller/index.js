@@ -21,6 +21,7 @@ ctrl.cv = (req,res) => {
         finalpath = path.resolve(`src/public/cvs/${name}${ext}`);
 
     fs.rename(tempath,finalpath);
+    req.flash('message','Tu curriculum se envio correctamente');
     res.redirect('/bolsaTrabajo');
 }
 

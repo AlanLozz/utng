@@ -90,4 +90,6 @@ router.get('/',(req,res)=>{
 
     router.post('/saveQuestion',ctrl.saveQuestion);
 
+    router.get('/getPreguntas', ctrl.getPreguntas);
+
 module.exports = router;

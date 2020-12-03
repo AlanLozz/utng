@@ -13,11 +13,45 @@
                 <button class="btn btn-info float-right" type="button" data-toggle="modal" data-target="#preguntaModal">Añadir Pregunta</button>
             </div>
             <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eaque! Beatae ipsam assumenda incidunt exercitationem. Repudiandae fugiat perferendis eaque quam omnis, dolorem rem aliquam illo minima, error eos cum maxime?
+                <div id="lista">
+                    <ul class="list-unstyled" id="segmento">
+                    
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $.ajax({
+        url:'/getPreguntas',
+        success: (preguntas) => {
+
+            if(preguntas.length>0){
+                $('#segmento').text('');
+                preguntas.forEach(e => {
+                    $('#segmento').append(`
+                    <li class="media mb-2">
+                        <img src="/img/question.jpg" class="mr-3 rounded-circle" width="80">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">${e.Titulo}</h5>
+                            <p>${e.Descripcion}</p>
+                        </div>
+                    </li>
+                    `)
+                });
+            } else {
+                $('#lista').text('');
+                $('#lista').append(`
+                <div class="alert alert-danger text-center" role="alert">
+                <strong>Oh no!</strong> Aún no hay preguntas, ¿Porqué no agregas una?
+                </div>
+                `)
+            }
+        }
+    })
+</script>
 
 <div class="modal fade" id="preguntaModal" tabindex="-1" aria-labelledby="preguntaModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -30,10 +30,16 @@ ctrl.saveQuestion = async(req,res) => {
     var pregunta = new Pregunta({
         Titulo,
         Descripcion
-    });
+    }).save();
+
+    req.flash('message','Pregunta añadida exitosamente');
     
-    var p = await pregunta.save();
-    res.json(p);
+    res.redirect('/foro')
 }
+
+ctrl.getPreguntas = async(req,res) => {
+    const preguntas = await Pregunta.find();
+    res.json(preguntas);
+};
 
 module.exports = ctrl;

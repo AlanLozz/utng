@@ -101,4 +101,8 @@ router.get('/',(req,res)=>{
         res.render('aspirantes1');
     });
 
+    router.get('/admisionTsu',(req,res)=>{
+        res.render('admisiontsu');
+    });
+
 module.exports = router;

@@ -1,0 +1,171 @@
+<%- layout('layout') %>
+<%- partial('partials/help') %>
+<div class="card mt-3 mb-3 rounded">
+    <img src="/img/Modelo.PNG" alt="" class="img-fluid">
+    <div class="card-body">
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+        </ul>
+        <div class="container">
+            <center>
+                <h1 class="mt-4">MODALIDADES DE ESTUDIO</h1>
+            </center>
+
+            <h3 class="mt-2">Técnico Superior Universitario</h3>
+
+            <div class="jumbotron">
+                <div class="row w-100">
+                    <div class="col-md-6">
+                        <div class="card bg-info border-white mx-sm-1 p-1">
+                            <div class="card-header text-white text-center mt-2">
+                                <h4>Escolarizado</h4>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Horario de Clases: Lunes a Viernes de 8:00 a 16:00 horas</h5>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Cuatrimestres: 6</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-info border-white mx-sm-1 p-1">
+                            <div class="card-header text-white text-center mt-2">
+                                <h4>Semiescolarizado</h4>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Horario de Clases: Viernes de 16:00 a 22:00 horas y
+                                    Sábados de 8:00 a 16:00 horas
+                                </h5>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Cuatrimestres: 9</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mt-1">Ingenierías</h3>
+
+            <div class="jumbotron">
+                <div class="row w-100">
+                    <div class="col-md-6">
+                        <div class="card text-white bg-danger border-dark mx-sm-1 p-1">
+                            <div class="card-header text-white text-center mt-2">
+                                <h4>Escolarizado</h4>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Horario de Clases: Lunes a Viernes de 16:00 a 22:00 horas</h5>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Cuatrimestres: 5</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card text-white bg-danger border-dark mx-sm-1 p-1">
+                            <div class="card-header text-white text-center mt-2">
+                                <h4>Semiescolarizado</h4>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Horario de Clases: Viernes de 16:00 a 22:00 horas y
+                                    Sábados de 8:00 a 18:00 horas
+                                </h5>
+                            </div>
+                            <div class="text-white text-center mt-2">
+                                <h5>Cuatrimestres: 6</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="mt-1">Modelo Educativo de la UTNG</h1>
+        <div class="card mb-4 bg-white text-white">
+            <img class="card-img" src="/img/ModeloEducativo.jpg" alt="Card image">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!--Estilos requeridos-->
+<style>
+    .file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    .file-input::before {
+        content: 'Subir PDF';
+        display: inline-block;
+        background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+    }
+
+    .file-input:hover::before {
+        border-color: black;
+    }
+
+    .file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+</style>
+<!--Fin de estilos-->
+
+<!--Script help-->
+<script>
+    function showHelp() {
+        $('#helperModal').modal()
+    }
+</script>
+<!--Fin script-->
+
+<!--Modal help-->
+<div class="modal modal-centered fade" tabindex="-1" id="helperModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ayuda</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="text-center">Modelo educativo</h4>
+                                    <div class="embed-responsive embed-responsive-16by9 rounded">
+                                        <iframe src="https://youtu.be/oGLy8KhWdWc" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="text-center">¿No encontraste lo que necesitabas?</h5>
+                            <p>Visita nuestro <a href="/foro">foro de mejora continua</a>, donde encontraras las dudas
+                                más frecuentes y posibles respuestas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin modal help-->

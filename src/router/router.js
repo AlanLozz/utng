@@ -92,4 +92,13 @@ router.get('/',(req,res)=>{
 
     router.get('/getPreguntas', ctrl.getPreguntas);
 
+//Aspirantes
+    router.get('/aspirantes',(req,res)=>{
+        res.render('aspirantes');
+    });
+
+    router.get('/aspirantes1',(req,res)=>{
+        res.render('aspirantes1');
+    });
+
 module.exports = router;

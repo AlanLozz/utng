@@ -1,0 +1,176 @@
+<%- layout('layout') %>
+<%- partial('partials/help') %>
+<div class="card mt-3 mb-3 rounded">
+    <img src="/img/UTNG.PNG" alt="" class="img-fluid">
+    <div class="card-body">
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+        </ul>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#usuario" role="tab"
+                    aria-controls="nav-home" aria-selected="true">¿Por qué estudiar en la UTNG?</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#cuenta" role="tab"
+                    aria-controls="nav-profile" aria-selected="false">LA MEJOR INFRAESTRUCTURA</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#laboral" role="tab"
+                    aria-controls="nav-contact" aria-selected="false">LOS MEJORES SERVICIOS A ESTUDIANTES</a>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div id="usuario" class="container tab-pane active" req>
+                <div class="container">
+                    <ol>
+                        <li>Somos una universidad pública, por ello nuestro accesible
+                            costo cuatrimestral de sólo $1035 .00 pesos.</li>
+                        <li>En sólo 2 años, obtienes título de Técnico
+                            Superior Universitario y cédula profesional y cursando 1
+                            año 8 meses más, de Ingeniero.</li>
+                        <li>Gracias a la estadía empresarial, la cual puedes realizar
+                            en una de las 1010 empresas vinculadas por el departamento de
+                            prácticas y estadías, egresas con 8 meses de experiencia
+                            profesional</li>
+                        <li>Las carreras que ofertamos son demandadas por el sector
+                            empresarial de la región y también con una
+                            proyección global.</li>
+                        <li>Nuestro modelo educativo privilegia la práctica sobre la
+                            teoría.</li>
+                        <li>Los procesos institucionales y programas educativos, están
+                            acreditados bajo normas internacionales de calidad.</li>
+                        <li>Te ofrecemos educación orientada a desarrollar en ti,
+                            competencias profesionales, personales y laborales.</li>
+                        <li>Programas de movilidad estudiantil, para becas al extranjero.</li>
+
+
+                    </ol>
+                </div>
+            </div>
+
+            <div id="cuenta" class="container tab-pane">
+                <ul>
+                    <li><i class="fas fa-check text-success"></i> 4 edificios de
+                        docencia con 63 aulas de clases.</li>
+                    <li><i class="fas fa-check text-success"></i> Biblioteca regional
+                        con 25, 328 ejemplares.</li>
+                    <li><i class="fas fa-check text-success"></i> 43 laboratorios
+                        especializados y equipados con tecnología de punta, donde
+                        se imparten clases prácticas de cada una de las carreras.</li>
+                    <li><i class="fas fa-check text-success"></i> 1 Gimnasio –
+                        auditorio con capacidad para más de 1000 personas, cancha
+                        multiusos de básquet bol y voleibol con piso de duela tipo
+                        profesional, espacio para acondicionamiento físico y
+                        espacio para atención médica.</li>
+                    <li><i class="fas fa-check text-success"></i> Canchas deportivas
+                        de futbol soccer, fútbol rápido, básquet bol,
+                        voleibol, tennis y pista de atletismo.</li>
+                    <li><i class="fas fa-check text-success"></i> 11 salas
+                        audiovisuales y de capacitación.</li>
+                    <li><i class="fas fa-check text-success"></i> Auditorio con
+                        capacidad para 160 personas.</li>
+                    <li><i class="fas fa-check text-success"></i> 1 sala de video
+                        conferencias.</li>
+                    <li><i class="fas fa-check text-success"></i> Equipos de
+                        cómputo, para clases y para investigaciones extra clase.</li>
+                    <li><i class="fas fa-check text-success"></i> Set de
+                        grabación.</li>
+                    <li><i class="fas fa-check text-success"></i> Cabina de radio.</li>
+                </ul>
+                </li>
+            </div>
+
+            <div id="laboral" class="container tab-pane">
+                <ul>
+                    <li><i class="fas fa-check text-success"></i> Departamento de
+                        salud física</li>
+                    <li><i class="fas fa-check text-success"></i> Departamentos
+                        Psicopedagógico</li>
+                    <li><i class="fas fa-check text-success"></i> Actividades
+                        culturales y Deportivas</li>
+                    <li><i class="fas fa-check text-success"></i> Lenguas extranjeras</li>
+                    <li><i class="fas fa-check text-success"></i> Bolsa de trabajo y
+                        seguimiento a egresados.</li>
+                </ul>
+                </li>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Estilos requeridos-->
+<style>
+    .file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    .file-input::before {
+        content: 'Subir PDF';
+        display: inline-block;
+        background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+    }
+
+    .file-input:hover::before {
+        border-color: black;
+    }
+
+    .file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+</style>
+<!--Fin de estilos-->
+
+<!--Script help-->
+<script>
+    function showHelp() {
+        $('#helperModal').modal()
+    }
+</script>
+<!--Fin script-->
+
+<!--Modal help-->
+<div class="modal modal-centered fade" tabindex="-1" id="helperModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ayuda</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="text-center">¿Por qué estudiar en la UTNG?</h4>
+                                    <div class="embed-responsive embed-responsive-16by9 rounded">
+                                        <iframe src="https://youtu.be/6Qq-LCBh2pE" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="text-center">¿No encontraste lo que necesitabas?</h5>
+                            <p>Visita nuestro <a href="/foro">foro de mejora continua</a>, donde encontraras las dudas
+                                más frecuentes y posibles respuestas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin modal help-->
